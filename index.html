@@ -14,6 +14,33 @@
       --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
+    header {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* Space between photo and name */
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    }
+
+    .profile-pic {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%; /* Makes the photo circular */
+    object-fit: cover; /* Prevents image stretching */
+    border: 2px solid var(--primary-color);
+    flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    }
+
+ 
     * {
       box-sizing: border-box;
       margin: 0;
@@ -164,6 +191,8 @@
     
     <!-- HEADER -->
     <header>
+      <img src="headshot.jpg" alt="Atta R. Raihannan" class="profile-pic">
+
       <h1>Atta R. Raihannan</h1>
       <div class="subtitle">Data Analytics & System Analytics</div>
       <div class="contact-info">
